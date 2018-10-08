@@ -2,11 +2,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 }
 
-@keyframes fade-in{  
-    0%{ opacity:0; }/*初始状态 透明度为0*/  
-    40%{ opacity:0; }/*过渡状态 透明度为0*/  
-    100%{ opacity:0.85; }/*结束状态 透明度为1*/  
-}  
+@keyframes fade-in{
+    0%{ opacity:0; }/*初始状态 透明度为0*/
+    40%{ opacity:0; }/*过渡状态 透明度为0*/
+    100%{ opacity:0.85; }/*结束状态 透明度为1*/
+}
 
 body{
 	background:url("img/bg.jpg") no-repeat;
@@ -18,7 +18,6 @@ section{
 	opacity: 0.85;
 	text-align: center;
 	font: inherit;
-	margin: 200px 10% 100px 10%;
 	animation: fade-in 0.8s ease 0s 1;
    	-webkit-animation: fade-in 0.8s ease 0s 1;
     -moz-animation: fade-in 0.8s ease 0s 1;
@@ -31,5 +30,12 @@ section.title{
 
 a{
 	text-decoration: none;
+	color: #233333;
+	color: #f525e4;
+}
+a.button{
+	border-radius: 4px;
+	border:1px solid #444444;
+	margin-bottom: 30px;
 	color: #233333;
 }
