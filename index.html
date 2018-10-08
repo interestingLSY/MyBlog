@@ -7,11 +7,20 @@
 	<title> IntLSY的小窝 </title>
 
 	<style type="text/css">
-		section.main{
-			margin: 10% 40% 10px 40%;
-			color: #233333;
-			opacity: 0.85;
+		@keyframes fade-in{  
+			0%{ opacity:0; }/*初始状态 透明度为0*/  
+			40%{ opacity:0; }/*过渡状态 透明度为0*/  
+			100%{ opacity:0.8; }/*结束状态 透明度为1*/  
 		}
+		section.title{
+			margin: 10% 40% 10px 40%;
+		}
+		img, h1, ul, li, a{
+			-webkit-animation: fade-in 2.5s ease 0s 1;
+    		-moz-animation: fade-in 2.5s ease 0s 1;
+    		-o-animation: fade-in 2.5s ease 0s 1;
+    		-ms-animation: fade-in 2.5s ease 0s 1;
+    	}
 		img.head{
 			margin-top: 40px;
 			width: 60%;
@@ -55,7 +64,7 @@
 </head>
 
 <body>
-	<section class="main">
+	<section class="title">
 		<img class="head" src="img/index/head.jpeg">  </img>
 		<h1 class="name"> intlsy </h1>
 		<h1 class="sentence"> - 诗酒趁年华 - </h1>

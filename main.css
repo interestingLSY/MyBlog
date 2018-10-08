@@ -2,10 +2,37 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 }
 
+@keyframes fade-in{  
+    0%{ opacity:0; }/*初始状态 透明度为0*/  
+    40%{ opacity:0; }/*过渡状态 透明度为0*/  
+    100%{ opacity:0.8; }/*结束状态 透明度为1*/  
+}  
+
 body{
-	background-image:url("img/bg.jpg");
+	background:url("img/bg.jpg") no-repeat;
+	animation: fade-in 2.5s ease 0s 1;
+    -webkit-animation: fade-in 2.5s ease 0s 1;
+    -moz-animation: fade-in 2.5s ease 0s 1;
+    -o-animation: fade-in 2.5s ease 0s 1;
+    -ms-animation: fade-in 2.5s ease 0s 1;
+    
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;  
+    -o-animation-fill-mode: forwards; 
+    -ms-animation-fill-mode: forwards;   
+    -moz-animation-fill-mode: forwards; 
 }
 
+section.title{
+	color: #233333;
+	opacity: 0.85;
+	animation: fade-in 0.8s ease 0s 1;
+   	-webkit-animation: fade-in 0.8s ease 0s 1;
+    -moz-animation: fade-in 0.8s ease 0s 1;
+    -o-animation: fade-in 0.8s ease 0s 1;
+    -ms-animation: fade-in 0.8s ease 0s 1;
+}
 section{
 	background: #ffffff;
 	opacity: 0.8;
