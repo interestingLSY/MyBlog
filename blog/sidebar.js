@@ -1,7 +1,8 @@
 function Bottom(){
 document.write(" \
 	<section class=\"card\" onclick=\"Top();\"> \
-		<p class=\"describe\" style=\"font-size:15px\"> 没东西啦！再看一遍吧qwq！点击来回到顶部！=w= </p> \
+		<p class=\"describe\" style=\"font-size:15px\"> 没东西啦！再看一遍吧qwq！点击来回到顶部！=w= <br /> \
+		顺便说一句，点击每页最上方的大标题可以返回上一页qwq！</p> \
 	</section> \
 	<a href=\"../../../about.html\"> \
 		<section class=\"card\"> \
@@ -19,10 +20,10 @@ document.write(" \
 	<section class=\"sidecard\"> \
 		<img src=../../../img/index/head.jpeg class=\"head\"> </img> \
 		<h1 class=\"sidetitle\"> intlsy </h1> \
-		<h2 class=\"sidetitle\"> 诗酒趁年华 </h2> \
+		<h2 class=\"sentence\"> 诗酒趁年华 </h2> \
 	</section> \
 	<section class=\"sidecard\"> \
-		<h2 class=\"sidetitle\"> dalao们 </h1> \
+		<h2 class=\"sidetitle\"> dalao们 </h2> \
 		<a href=\"https://captain1.cnblogs.com/\"> \
 			<div class=\"sidecont\"> \
 				<div style=\"color:#000;display:inline;\"> L</div><div style=\"color:#f00;display:inline;\">iboao </div>大佬的博客 \
@@ -38,6 +39,21 @@ document.write(" \
 				BZY 红胖子 (bin哥) \
 			</div> \
 		</a> \
+		<a href=\"http://www.cnblogs.com/ivorysi\"> \
+			<div class=\"sidecont\"> \
+				在下司公子，又名4 + 7 \
+			</div> \
+		</a> \
+	</section> \
+	<section class=\"sidecard\"> \
+		<h2 class=\"sidetitle\"> 试着联系我？ </h2> \
+		<div class=\"sidecont\"> \
+			qq: 2659723130 <br /> \
+			luogu: <a href=\"https://www.luogu.org/space/show?uid=25630\">interestingLSY,uid:25630 </a> <br /> \
+			codeforces: <a href=\"http://codeforces.com/profile/interestingLSY\">interestingLSY</a> <br /> \
+			coding.net: <a href=\"https://coding.net/u/interestingLSY/main\">interestingLSY</a> <br /> \
+			博客出锅了记得跟我说qwq \
+		</div> \
 	</section> \
 </div> \
 ");
