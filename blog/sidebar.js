@@ -1,7 +1,11 @@
 function Bottom(){
 document.write(" \
 	<section class=\"card\" onclick=\"Top();\"> \
+<<<<<<< HEAD
 		<p class=\"describe\" style=\"font-size:15px\"> 没东西啦！再看一遍吧qwq！点击这里来回到顶部！=w= <br /> \
+=======
+		<p class=\"describe\" style=\"font-size:15px\"> 没东西啦！再看一遍吧qwq！点击来回到顶部！=w= <br /> \
+>>>>>>> e6ca1fc8c72e791033527a387581bd429386c543
 		顺便说一句，点击每页最上方的大标题可以返回上一页qwq！</p> \
 	</section> \
 	<a href=\"../../../about.html\"> \
@@ -50,11 +54,14 @@ document.write(" \
 				在下司公子，又名4 + 7 \
 			</div> \
 		</a> \
+<<<<<<< HEAD
 		<a href=\"https://shulker.cnblogs.com/\"> \
 			<div class=\"sidecont\"> \
 				.....(nxy的博客) \
 			</div> \
 		</a>  \
+=======
+>>>>>>> e6ca1fc8c72e791033527a387581bd429386c543
 	</section> \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> 试着联系我？ </h2> \
