@@ -1,0 +1,136 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike , strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+	font: inherit;
+}
+
+@keyframes fade-in{
+    0%{ opacity:0; }
+    40%{ opacity:0; }
+    100%{ opacity:0.7; }
+}
+
+body{
+	background:url("../img/bg.jpg") no-repeat;
+	background-attachment:fixed
+}
+
+section{
+	background: #ffffff;
+	color: #233333;
+	opacity: 0.7;
+	text-align: center;
+	font: inherit;
+	animation: fade-in 0.8s ease 0s 1;
+   	-webkit-animation: fade-in 0.8s ease 0s 1;
+    -moz-animation: fade-in 0.8s ease 0s 1;
+    -o-animation: fade-in 0.8s ease 0s 1;
+    -ms-animation: fade-in 0.8s ease 0s 1;
+	border-radius: 10px;
+}
+
+div.main{
+	float:left;
+	margin: 2% 1px 1% 10%;
+	width:50%;
+}
+section.title{
+	padding: 1px 1px;
+	text-align: center;
+	margin-bottom:30px;
+}
+h1.title{
+	font-size: 40px;
+	letter-spacing: 15px;
+	padding-left: 15px;
+	margin: 10px 10px;
+	color: #dd14d3;
+}
+
+section.card{
+	padding: 1px 1px;
+	color: #233333;
+	text-align: left;
+	margin-bottom:30px;
+}
+h2.title{
+	font-size: 27px;
+	letter-spacing: 15px;
+	padding-left: 60px;
+	color: #dd14d3;
+	margin: 10px 0px;
+}
+p.describe{
+	color: #233333;
+	font-size: 20px;
+	//padding-left: 60px;
+	margin: 10px 60px;
+}
+div.context{
+	color: #233333;
+	font-size: 20px;
+	//padding-left: 60px;
+	margin: 10px 60px;
+}
+div.contitle{
+	color: #dd14d3;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+p.proud{
+	color: #233333;
+	font-size: 12px;
+	//padding-left: 60px;
+	margin: 2px 60px;
+	text-align: center;
+}
+hr{
+	color: #dd14d3;
+	width: 40%;
+	border: 1px dotted;
+	margin-left:20px;
+}
+
+div.sidebar{
+	float: right;
+	margin: 2% 8% 1% 1%;
+	width: 20%;
+}
+img.head{
+	width:40%;
+	height:40%;
+	margin-top: 30px;
+}
+h1.sidetitle{
+	font-size: 30px;
+	letter-spacing: 13px;
+	padding-left: 13px;
+	margin: 10px 10px;
+	color: #233333;
+}
+h2.sidetitle{
+	font-size: 20px;
+	letter-spacing: 10px;
+	padding-left: 10px;
+	margin: 10px 10px;
+	padding-bottom:20px;
+	color: #233333;
+}
+section.sidecard{
+	padding: 1px 1px;
+	color: #233333;
+	text-align: center;
+	margin-bottom:30px;
+}
+
+a{
+	text-decoration: none;
+	color: #f525e4;
+}
+a.button{
+	border-radius: 4px;
+	border:1px solid #444444;
+	margin-bottom: 10px;
+	color: #233333;
+}
+a.go{
+
+}

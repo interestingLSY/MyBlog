@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../blog.css" />
+	<title> IntLSY的小窝 | 线段树维护插入 </title>
+	<link rel="stylesheet" type="text/css" href="../../../highlight/styles/default.css">
+	<script src="../../../highlight/highlight.pack.js"> </script>
+	<script src="../../sidebar.js"> </script>
+</head>
+
+<body>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<div class="main">
+
+	<a href="21days.html">
+		<section class="title">
+			<!-- <a class="button" href="../index.html"> back </a> -->
+			<h1 class="title" style=""> - 线段树维护插入 - </h1>
+		</section>
+	</a>
+
+	<!-- Artical begin -->
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 题意 </div>
+			维护一个序列，每次在指定位置插入一个数，球最后序列
+			<a href="http://poj.org/problem?id=2828" class="button" style="margin-left:20px;"> Link <a>
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 转化 </div>
+			显然平衡树和分块可以在线秒，但线段树表示不服！<br />
+			<u>如果我们正着处理询问，相当于插入，那反着处理岂不是删除？</u> <br />
+			线段树不能新增节点，所以搞不了插入，但可以搞删除！把节点打一个删除标记就行了！ <br />
+			我们先把所有询问读进来，然后倒着做。 <br />
+			我们所有人都插入后，最后一个人的位置就是她插进来的位置对吧。 <br />
+			那么好，我们把最后一个人插进来的位置（记为a）"删除"，考虑倒数第二个人，假设她插在了位置b，
+			她应该是处于<u>删除后</u>序列中第b个位置（理解一下）。 <br />
+			她插入之后，我们再把倒数第三个人插进来(假设她插在了位置c)，她应该处于<u>删掉倒数后两个人之后</u>的位置c。
+			以此类推，啊哈！
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 解决 </div>
+			现在有两个问题:
+			<ul>
+				<li> 删除一个"位置"（跟删除一个元素差不多） </li>
+				<li> 查询第i个元素的位置。 </li>
+			</ul>
+			考虑建一棵线段树，节点维护区间中元素个数 <br />
+			对于问题一，线段树直接单点修改即可 <br />
+			对于问题二，树上二分。 <br />
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 代码 </div>
+			<pre><code>
+#define MAXN 200010
+
+int q;
+int pos[MAXN], val[MAXN];
+
+#define TREE 800040
+#define ARG int l , int r , int pos
+#define LSON l,l+r>>1,pos<<1
+#define RSON (l+r>>1)+1,r,pos<<1|1
+#define ROOT 1,q,1
+
+int tree[TREE];
+void Build(ARG){
+	tree[pos] = r-l+1;
+	if( l == r ) return;
+	Build(LSON);
+	Build(RSON);
+}
+int Query( int gpos , ARG ){
+	tree[pos]--;
+	if( l == r ) return l;
+	int leq = tree[pos<<1];
+	if( gpos <= leq ) return Query(gpos,LSON);
+	return Query(gpos-leq,RSON);
+}
+
+int ansl[MAXN];
+
+int main(){
+	FILEIO();
+
+	while( scanf("%d",&q) != EOF ){
+		For(i,q)
+			scanf("%d %d",&pos[i],&val[i]);
+		Build(ROOT);
+		fOR(i,q){
+			int posi = Query(pos[i]+1,ROOT);
+			ansl[posi] = val[i];
+		}
+		Print(ansl,1,q);
+	}
+	END();
+}
+</code><pre>
+		</div>
+	</section>
+
+	<script> Bottom(); </script>
+
+	</div>
+
+	<script> Sidebar(); </script>
+
+
+</body>
+
+</html>
