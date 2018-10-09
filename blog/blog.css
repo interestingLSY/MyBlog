@@ -106,7 +106,7 @@ h1.sidetitle{
 	margin: 10px 10px;
 	color: #233333;
 }
-h2.sidetitle{
+h2.sentence{
 	font-size: 20px;
 	letter-spacing: 10px;
 	padding-left: 10px;
@@ -114,6 +114,19 @@ h2.sidetitle{
 	padding-bottom:20px;
 	color: #233333;
 }
+h2.sidetitle{
+	font-size: 25px;
+	text-align: left;
+	color: #dd14d3;
+	margin: 10px 30px;
+}
+div.sidecont{
+	font-size: 20px;
+	text-align: left;
+	color: #233333;
+	margin: 10px 30px;
+}
+
 section.sidecard{
 	padding: 1px 1px;
 	color: #233333;
