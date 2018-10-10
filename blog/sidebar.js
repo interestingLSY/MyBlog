@@ -55,6 +55,11 @@ document.write(" \
 				.....(nxy的博客) \
 			</div> \
 		</a>  \
+		<a href=\"https://Ch-someone.cnblogs.com/\"> \
+			<div class=\"sidecont\"> \
+				GGF主席杜子德 \
+			</div> \
+		</a> \
 	</section> \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> 试着联系我？ </h2> \
