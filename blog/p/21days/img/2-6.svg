@@ -1,0 +1,29 @@
+<svg width="512" height="120" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="122" width="514" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="41.650012" x2="510.765686" y1="41.650012" x1="0.75" stroke-width="1.5" stroke="#000" fill="none"/>
+  <rect opacity="0.74" id="svg_36" height="39.999992" width="440.799899" y="1.15" x="1.15" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#7ad6ca"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_38" y2="117.65" x2="510.765686" y1="117.65" x1="0.75" stroke-width="1.5" stroke="#000" fill="none"/>
+  <rect opacity="0.74" id="svg_39" height="39.999992" width="428.399914" y="76.850008" x="82.850086" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#7ad6ca"/>
+  <rect opacity="0.8" id="svg_40" height="31.999993" width="81.199983" y="9.200012" x="0.800056" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#FFFF91"/>
+  <rect opacity="0.8" id="svg_41" height="31.999993" width="81.199983" y="84.399994" x="83.200043" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#FFFF91"/>
+  <rect opacity="0.6" id="svg_42" height="31.599991" width="81.199983" y="9.600013" x="83.200043" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#ff00ff"/>
+  <rect id="svg_43" height="0" width="0.8" y="51.600003" x="218.000011" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#ff00ff"/>
+  <rect opacity="0.6" id="svg_44" height="31.599991" width="81.199983" y="85.599998" x="173.200026" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#ff00ff"/>
+  <text transform="matrix(1.12333, 0, 0, 1.0589, -13.8113, 7.00206)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_45" y="20.111264" x="249.177349" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#000000">...</text>
+  <rect opacity="0.6" id="svg_47" height="31.599991" width="81.199983" y="9.600013" x="83.200043" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#ff00ff"/>
+  <text transform="matrix(1.12333, 0, 0, 1.0589, -13.8113, 7.00206)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_48" y="90.372845" x="329.296592" stroke-opacity="null" stroke-width="0" stroke="null" fill="#000000">...</text>
+  <rect opacity="0.76" id="svg_49" height="30.399994" width="80.399984" y="10.000012" x="173.200021" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#CC7C65"/>
+  <rect opacity="0.76" id="svg_50" height="30.399994" width="79.599983" y="86.799992" x="258.800005" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#CC7C65"/>
+  <rect opacity="0.5" id="svg_51" height="117.599975" width="81.999981" y="2.800014" x="83.200039" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#999999"/>
+  <rect opacity="0.5" id="svg_53" height="117.599975" width="81.999981" y="2.800014" x="172.800021" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#999999"/>
+ </g>
+</svg>

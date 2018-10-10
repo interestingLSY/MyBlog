@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../blog.css" />
+	<title> IntLSY的小窝 | 最短循环子串 </title>
+	<link rel="stylesheet" type="text/css" href="../../../highlight/styles/default.css">
+	<script src="../../../highlight/highlight.pack.js"> </script>
+	<script src="../../sidebar.js"> </script>
+</head>
+
+<body>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<div class="main">
+
+	<a href="21days.html">
+		<section class="title">
+			<!-- <a class="button" href="../index.html"> back </a> -->
+			<h1 class="title" style=""> - 最短循环子串 - </h1>
+		</section>
+	</a>
+
+	<!-- Artical begin -->
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 题意 </div>
+			给你一个制胡窜，球最短循环子串（也就是说她能写成AA...AA，A为一子串的形式）
+			<a href="http://poj.org/problem?id=2406" class="button" style="margin-left:10px;"> Link <a>
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 解法一 KMP </div>
+			emmmmm...其实不是用KMP，而是用了Next数组。 <br />
+			众所周知，KMP中Next[i]=x表示长度为i的前缀中，最长公共前后缀的长度为x。 <br />
+			那么我们开始分类讨论: <br />
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 情况一： <u>整个串</u> 的最长公共前后缀无重叠部分: </div>
+			如下图所示(相同颜色代表相同的部分，这一整条线段代表原字符串): <br />
+			<img src="img/2-1.svg" class="smallimg" /> <br />
+			那么这个时候她有循环次数 &gt; 1的子串吗? <br />
+			答案是没有。<br />
+			为什么？ <br />
+			假设存在一个循环次数 &gt; 1的子串，如下图（我懒只画了四个qwq): <br />
+			<img src="img/2-2.svg" class="smallimg" /> <br />
+			那么下图中两个灰色的部分应该完全相同: <br />
+			<img src="img/2-3.svg" class="smallimg" /> <br />
+			这不就与next的定义矛盾了么qwq？ <br />
+			所以此时最短循环子串就是她本身。 <br />
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 情况二： <u>整个串</u> 的最长公共前后缀有重叠部分： </div>
+			（方便您看，我把一个字符串分成了上下两部分画，但要记住这两个是一个字符串）: <br />
+			<img src="img/2-4.svg" class="midimg" /> <br />
+			那么根据next的定义，下图中相同颜色的部分是一样的 <br />
+			<img src="img/2-5.svg" class="midimg" /> <br />
+			又由于我的两条线段表示的是一个字符串，所以黄色部分和紫色部分又完全相同，紫色部分和。。。（这什么颜色啊233）也完全相同。如下图灰色部分。 <br />
+			<img src="img/2-6.svg" class="midimg" /> <br />
+			以此类推，整个串就完全相同啦! 对不对？<br />
+			. <br /> . <br /> . <br /> . <br /> . <br />
+			. <br /> . <br /> . <br /> . <br /> . <br />
+			. <br /> . <br /> . <br /> . <br /> . <br />
+			. <br /> . <br /> . <br /> . <br /> . <br />
+			不对！！！（手动滑稽） <br />
+			因为整个字符串的长度不一定能整除上面我们球的循环节的长度（ n - next[n] ) <br />
+			那么此时这个字符串最短循环子串就是她本身。 <br />
+			为什么？ 证明类似情况一。自己想想？ <br />
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> <pre>解法二：*-=3#%￥%.,>$>@%……! 自动机</pre> </div>
+			我不会。。。（逃）
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 结论 </div>
+			答案为：（ans为最短循环子串的长度） <br />
+			<pre><code>
+ans = (n-nxt[n])%n ? n : n-nxt[n];
+			</code></pre>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 代码 </div>
+			注意此题中要求的是最短循环节的<u>出现次数</u>
+			<pre><code>
+#define MAXN 1000010
+
+int n;
+string s;
+
+int nxt[MAXN];
+void Next(){
+	nxt[1] = 0;
+	Forx(i,2,n){
+		int prelen = nxt[i-1];
+		while( prelen && s[prelen+1] != s[i] )
+			prelen = nxt[prelen];
+		nxt[i] = prelen + (s[prelen+1]==s[i]);
+	}
+}
+
+int main(){
+	FILEIO();
+
+	while(1){
+		In.Readstring(s);
+		if( s == "." ) END();
+		n = s.length();
+		s = " "+s;
+		Next();
+		//Print(nxt,1,n);
+		int ans = n - nxt[n];
+		if(n%ans){ printf("%d\n",1); }
+		else{ printf("%d\n",n/ans); }
+	}
+
+	END();
+}
+
+</code><pre>
+		</div>
+	</section>
+
+	<script> Bottom(); </script>
+
+	</div>
+
+	<script> Sidebar(); </script>
+
+
+</body>
+
+</html>
