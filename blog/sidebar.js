@@ -71,6 +71,12 @@ document.write(" \
 			博客出锅了记得跟我说qwq \
 		</div> \
 	</section> \
+	<section class=\"sidecard\"> \
+		<h2 class=\"sidetitle\" style=\"margin-bottom:0px\"> 来访的dalao们 </h2> \
+		<a href=\"https://info.flagcounter.com/BOsP\"> \
+			<a href=\"https://info.flagcounter.com/3w8k\"><img style=\"margin:10px\" src=\"https://s01.flagcounter.com/countxl/3w8k/bg_FFFFFF/txt_000000/border_FFFFFF/columns_3/maxflags_6/viewers_3/labels_1/pageviews_0/flags_0/percent_0/\" alt=\"Flag Counter\" border=\"0\"></a> \
+		</a> \
+	</section> \
 </div> \
 ")
 }
