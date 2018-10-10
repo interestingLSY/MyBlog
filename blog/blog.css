@@ -26,12 +26,12 @@ section{
     -ms-animation: fade-in 0.8s ease 0s 1;
 	border-radius: 10px;
 }
-
 div.main{
 	float:left;
 	margin: 2% 1px 1% 14%;
 	width:50%;
 }
+
 section.title{
 	padding: 1px 1px;
 	text-align: center;
@@ -74,6 +74,23 @@ div.contitle{
 	color: #dd14d3;
 	font-size: 25px;
 	margin-bottom: 10px;
+}
+img{
+	opacity:1.0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+img.smallimg{
+	height:70px;
+}
+img.midimg{
+	height:150px;
+}
+img.blogimg{
+	height:200px;
+}
+img.bigimg{
+	height:350px;
 }
 p.proud{
 	color: #233333;
