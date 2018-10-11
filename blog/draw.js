@@ -1,5 +1,6 @@
 function Head(){
-	document.write("<script src=\'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML\' async></script>");
+	document.write("<script src=\"//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>");
+	document.write("<link rel=\"dns-prefetch\" href=\"//cdn.mathjax.org\" />");
 	document.write("<script src=\"../../../highlight/highlight.pack.js\"> </script>");
 	document.write("<script>hljs.initHighlightingOnLoad();</script>");
 }

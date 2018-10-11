@@ -7,6 +7,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     40%{ opacity:0; }
     100%{ opacity:0.7; }
 }
+@keyframes Turn{
+    0%{
+		background-color: #ffffff;
+		color: #233333;
+	}
+	/*
+    50%{
+		background-color: #666666;
+		color: #bbbbbb;
+	}
+	*/
+    100%{
+		background-color: #333333;
+		color: #ffffff;
+	}
+}
 
 body{
 	background:url("../img/bg.jpg") no-repeat;
@@ -25,6 +41,9 @@ section{
     -o-animation: fade-in 0.8s ease 0s 1;
     -ms-animation: fade-in 0.8s ease 0s 1;
 	border-radius: 10px;
+}
+section:hover{
+
 }
 div.main{
 	float:left;
@@ -88,6 +107,15 @@ img.blogimg{
 }
 img.bigimg{
 	width: 100%;
+}
+img:hover{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transform: scale(1.2,1.2);
+	-ms-transform: scale(1.2,1.2);
+	-webkit-transform: scale(1.2,1.2);
+	-o-transform: scale(1.2,1.2);
+	-moz-transform: scale(1.2,1.2);
 }
 p.proud{
 	color: #233333;
@@ -161,6 +189,19 @@ a.button{
 	margin-bottom: 10px;
 	color: #233333;
 }
-a.go{
-
+a.button:hover{
+	animation: Turn 0.8s ease 0s 1 normal running forwards;
+   	-webkit-animation: Turn 0.8s ease 0s 1 normal running forwards;
+    -moz-animation: Turn 0.8s ease 0s 1 normal running forwards;
+    -o-animation: Turn 0.8s ease 0s 1 normal running forwards;
+    -ms-animation: Turn 0.8s ease 0s 1 normal running forwards;
+}
+h2.title:hover{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transform: scale(1.05,1.05);
+	-ms-transform: scale(1.05,1.05);
+	-webkit-transform: scale(1.05,1.05);
+	-o-transform: scale(1.05,1.05);
+	-moz-transform: scale(1.05,1.05);
 }

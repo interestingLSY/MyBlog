@@ -2,10 +2,26 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 }
 
-@keyframes fade-in{
+@keyframes Fade-in{
     0%{ opacity:0; }/*初始状态 透明度为0*/
     40%{ opacity:0; }/*过渡状态 透明度为0*/
     100%{ opacity:0.85; }/*结束状态 透明度为1*/
+}
+@keyframes Turn{
+    0%{
+		background-color: #ffffff;
+		color: #233333;
+	}
+	/*
+    50%{
+		background-color: #666666;
+		color: #bbbbbb;
+	}
+	*/
+    100%{
+		background-color: #333333;
+		color: #ffffff;
+	}
 }
 
 body{
@@ -18,11 +34,11 @@ section{
 	opacity: 0.85;
 	text-align: center;
 	font: inherit;
-	animation: fade-in 0.8s ease 0s 1;
-   	-webkit-animation: fade-in 0.8s ease 0s 1;
-    -moz-animation: fade-in 0.8s ease 0s 1;
-    -o-animation: fade-in 0.8s ease 0s 1;
-    -ms-animation: fade-in 0.8s ease 0s 1;
+	animation: Fade-in 0.8s ease 0s 1;
+   	-webkit-animation: Fade-in 0.8s ease 0s 1;
+    -moz-animation: Fade-in 0.8s ease 0s 1;
+    -o-animation: Fade-in 0.8s ease 0s 1;
+    -ms-animation: Fade-in 0.8s ease 0s 1;
 }
 
 section.title{
@@ -38,4 +54,11 @@ a.button{
 	border:1px solid #444444;
 	margin-bottom: 10px;
 	color: #233333;
+}
+a.button:hover{
+	animation: Turn 0.8s ease 0s 1 normal running forwards;
+   	-webkit-animation: Turn 0.8s ease 0s 1 normal running forwards;
+    -moz-animation: Turn 0.8s ease 0s 1 normal running forwards;
+    -o-animation: Turn 0.8s ease 0s 1 normal running forwards;
+    -ms-animation: Turn 0.8s ease 0s 1 normal running forwards;
 }
