@@ -81,16 +81,13 @@ img{
 	margin-bottom: 40px;
 }
 img.smallimg{
-	height:70px;
-}
-img.midimg{
-	height:150px;
+	width: 30%;
 }
 img.blogimg{
-	height:200px;
+	width: 75%;
 }
 img.bigimg{
-	height:350px;
+	width: 100%;
 }
 p.proud{
 	color: #233333;
@@ -142,6 +139,9 @@ div.sidecont{
 	text-align: left;
 	color: #233333;
 	margin: 10px 30px;
+}
+img.sideimg{
+	width: 90%;
 }
 
 section.sidecard{

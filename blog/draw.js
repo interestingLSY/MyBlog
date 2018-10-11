@@ -1,3 +1,8 @@
+function Head(){
+	document.write("<script src=\'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML\' async></script>");
+	document.write("<script src=\"../../../highlight/highlight.pack.js\"> </script>");
+	document.write("<script>hljs.initHighlightingOnLoad();</script>");
+}
 function Bottom(){
 document.write(" \
 	<section class=\"card\" onclick=\"Top();\"> \
@@ -74,7 +79,7 @@ document.write(" \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\" style=\"margin-bottom:0px\"> 来访的dalao们 </h2> \
 		<a href=\"https://info.flagcounter.com/BOsP\"> \
-			<a href=\"https://info.flagcounter.com/3w8k\"><img style=\"margin:10px\" src=\"https://s01.flagcounter.com/countxl/3w8k/bg_FFFFFF/txt_000000/border_FFFFFF/columns_3/maxflags_6/viewers_3/labels_1/pageviews_0/flags_0/percent_0/\" alt=\"Flag Counter\" border=\"0\"></a> \
+			<a href=\"https://info.flagcounter.com/3w8k\"><img class=\"sideimg\" style=\"margin:10px\" src=\"https://s01.flagcounter.com/countxl/3w8k/bg_FFFFFF/txt_000000/border_FFFFFF/columns_3/maxflags_6/viewers_3/labels_1/pageviews_0/flags_0/percent_0/\" alt=\"Flag Counter\" border=\"0\"></a> \
 		</a> \
 	</section> \
 </div> \
