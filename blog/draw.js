@@ -2,8 +2,8 @@ function Head(){
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/blog/blog.css\" />");
 	document.write("<script src=\"//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>");
 	document.write("<link rel=\"dns-prefetch\" href=\"//cdn.mathjax.org\" />");
-	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/highlight/styles/default.css\">");
-	document.write("<script src=\"/highlight/highlight.pack.js\"> </script>");
+	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\">");
+	document.write("<script src=\"/MyBlog/highlight/highlight.pack.js\"> </script>");
 	document.write("<script>hljs.initHighlightingOnLoad();</script>");
 }
 function Bottom(){
@@ -12,7 +12,7 @@ document.write(" \
 		<p class=\"describe\" style=\"font-size:15px\"> 没东西啦！再看一遍吧qwq！点击这里来回到顶部！=w= <br /> \
 		顺便说一句，点击每页最上方的大标题可以返回上一页qwq！</p> \
 	</section> \
-	<a href=\"/about.html\"> \
+	<a href=\"/MyBlog/about.html\"> \
 		<section class=\"card\"> \
 			<p class=\"proud\"> 自豪地使用自己亲手写的blog </p> \
 		</section> \
@@ -32,7 +32,7 @@ function Sidebar(){
 document.write(" \
 <div class=\"sidebar\"> \
 	<section class=\"sidecard\"> \
-		<img src=/img/index/head.jpeg class=\"head\" style=\"margin-bottom:0px\"> </img> \
+		<img src=/MyBlog/img/index/head.jpeg class=\"head\" style=\"margin-bottom:0px\"> </img> \
 		<h1 class=\"sidetitle\"> intlsy </h1> \
 		<h2 class=\"sentence\"> 诗酒趁年华 </h2> \
 	</section> \
@@ -91,7 +91,7 @@ document.write(" \
 	</section> \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> 投个食吧qwq </h1> \
-		<img src=/img/index/wechat.png class=\"head\" style=\"margin-bottom:0px\"> </img> \
+		<img src=/MyBlog/img/index/wechat.png class=\"head\" style=\"margin-bottom:0px\"> </img> \
 		<div class=\"sidecont\"> 感谢老爷投食qwq！ </h2> \
 	</section> \
 </div> \
