@@ -1,5 +1,5 @@
 function Head(){
-	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/blog/blog.css\" />");
+	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/blog/blog.css\" />");
 	document.write("<script src=\"//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>");
 	document.write("<link rel=\"dns-prefetch\" href=\"//cdn.mathjax.org\" />");
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\">");
