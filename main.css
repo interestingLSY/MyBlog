@@ -25,13 +25,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body{
-	background:url("img/bg.jpg") no-repeat;
+	background:url("https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515") no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	background-position:center top;
 }
 
 section{
 	background: #ffffff;
 	color: #233333;
-	opacity: 0.85;
+	opacity: 0.8;
 	text-align: center;
 	font: inherit;
 	animation: Fade-in 0.8s ease 0s 1;
