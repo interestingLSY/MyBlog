@@ -1,7 +1,7 @@
 function Head(){
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/blog/blog.css\" />");
 	//document.write("<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async\"></script>");
-	document.write("<script type=\"text/javascript\" async src=\"/MyBlog/MathJax/MathJax.js?config=TeX-MML-AM_CHTML\"></script>");
+	document.write("<script type=\"text/javascript\" async src=\"/MyBlog/Mathjax/MathJax.js?config=TeX-MML-AM_CHTML\"></script>");
 	document.write("<link rel=\"dns-prefetch\" href=\"//cdn.mathjax.org\" />");
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\" />");
 	document.write("<script src=\"/MyBlog/highlight/highlight.pack.js\"> </script>");
