@@ -3,27 +3,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 @keyframes Fade-in{
-    0%{ opacity:0; }/*初始状态 透明度为0*/
-    40%{ opacity:0; }/*过渡状态 透明度为0*/
-    100%{ opacity:0.85; }/*结束状态 透明度为1*/
+    0%{ opacity:0; }
+    40%{ opacity:0; }
+    100%{ opacity:0.4; }
 }
-@keyframes Turn{
-    0%{
-		background-color: #ffffff;
-		color: #233333;
-	}
-	/*
-    50%{
-		background-color: #666666;
-		color: #bbbbbb;
-	}
-	*/
-    100%{
-		background-color: #333333;
-		color: #ffffff;
-	}
-}
-
 body{
 	background:url("https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515") no-repeat;
 	background-size:cover;
@@ -34,22 +17,19 @@ body{
 section{
 	background: #ffffff;
 	color: #233333;
-	opacity: 0.8;
+	opacity: 0.4;
 	text-align: center;
 	font: inherit;
+	margin: 10% 40% 10px 40%;
 	animation: Fade-in 0.8s ease 0s 1;
-   	-webkit-animation: Fade-in 0.8s ease 0s 1;
-    -moz-animation: Fade-in 0.8s ease 0s 1;
-    -o-animation: Fade-in 0.8s ease 0s 1;
-    -ms-animation: Fade-in 0.8s ease 0s 1;
+	transition: all 0.4s;
 }
-
-section.title{
+section:hover{
+	opacity: 0.9;
 }
 
 a{
 	text-decoration: none;
-	color: #233333;
 	color: #f525e4;
 }
 a.button{
@@ -57,11 +37,29 @@ a.button{
 	border:1px solid #444444;
 	margin-bottom: 10px;
 	color: #233333;
+	transition: color 1s, background_color 1s;
 }
 a.button:hover{
-	animation: Turn 0.8s ease 0s 1 normal running forwards;
-   	-webkit-animation: Turn 0.8s ease 0s 1 normal running forwards;
-    -moz-animation: Turn 0.8s ease 0s 1 normal running forwards;
-    -o-animation: Turn 0.8s ease 0s 1 normal running forwards;
-    -ms-animation: Turn 0.8s ease 0s 1 normal running forwards;
+	background-color: #333333;
+	color: #ffffff;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li{
+	display: inline;
+	padding: 0px 10px;
+}
+img.link{
+	width: 30px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+img.head{
+	margin-top: 40px;
+	width: 60%;
+	height: 60%;
 }

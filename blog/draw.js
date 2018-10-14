@@ -1,8 +1,9 @@
 function Head(){
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/blog/blog.css\" />");
-	document.write("<script src=\"//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>");
+	//document.write("<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async\"></script>");
+	document.write("<script type=\"text/javascript\" async src=\"/MyBlog/MathJax/MathJax.js?config=TeX-MML-AM_CHTML\"></script>");
 	document.write("<link rel=\"dns-prefetch\" href=\"//cdn.mathjax.org\" />");
-	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\">");
+	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\" />");
 	document.write("<script src=\"/MyBlog/highlight/highlight.pack.js\"> </script>");
 	document.write("<script>hljs.initHighlightingOnLoad();</script>");
 }
@@ -36,9 +37,10 @@ document.write(" \
 		<h1 class=\"sidetitle\"> intlsy </h1> \
 		<h2 class=\"sentence\"> 诗酒趁年华 </h2> \
 	</section> \
-	<section class=\"sidecard\"> \
+	<section class=\"sidecard\" style=\"opacity:1; background:#dddddd\"> \
 		<h2 class=\"sidetitle\" style=\"margin-bottom:0px\"> 随机出来的妹子图qwq </h2> \
-		<img src=\"https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515\" class=\"sideimg\"/> \
+		<img src=\"https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515\" class=\"girlimg\"/> \
+		<div class=\"sidecont\" style=\"margin-top:0px;margin-bottom:1px; text-align:center; font-size:11px; padding-left:23px; letter-spacing:23px\"> 鼠标移上以舔屏 </div> \
 	</section> \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> dalao们 </h2> \

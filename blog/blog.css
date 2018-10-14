@@ -7,32 +7,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     40%{ opacity:0; }
     100%{ opacity:0.7; }
 }
-@keyframes Turn{
-    0%{
-		background-color: #ffffff;
-		color: #233333;
-	}
-	/*
-    50%{
-		background-color: #666666;
-		color: #bbbbbb;
-	}
-	*/
-    100%{
-		background-color: #333333;
-		color: #ffffff;
-	}
-}
 
 body{
 	background:url("../img/bg.jpg") no-repeat;
 	background-attachment:fixed
 }
 
+/* ---------- main ---------- */
 section{
 	background: #ffffff;
 	color: #233333;
-	opacity: 0.7;
+	opacity: 0.75;
 	text-align: center;
 	font: inherit;
 	animation: fade-in 0.8s ease 0s 1;
@@ -92,30 +77,19 @@ div.context{
 div.contitle{
 	color: #dd14d3;
 	font-size: 25px;
-	margin-bottom: 10px;
+	margin-bottom:5px;
 }
 img{
 	opacity:1.0;
 	margin-top: 40px;
 	margin-bottom: 40px;
+	transition: all 0.4s;
 }
-img.smallimg{
-	width: 30%;
-}
-img.blogimg{
-	width: 75%;
-}
-img.bigimg{
-	width: 100%;
-}
+img.smallimg{ width: 30%; }
+img.blogimg{ width: 75%; }
+img.bigimg{ width: 100%; }
 img:hover{
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 	transform: scale(1.2,1.2);
-	-ms-transform: scale(1.2,1.2);
-	-webkit-transform: scale(1.2,1.2);
-	-o-transform: scale(1.2,1.2);
-	-moz-transform: scale(1.2,1.2);
 }
 p.proud{
 	color: #233333;
@@ -174,6 +148,15 @@ img.sideimg{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+img.girlimg{
+	width: 95%;
+	margin-top: 8px;
+	margin-bottom: 0px;
+	z-index: 100;
+}
+img.girlimg:hover{
+	transform: scale(4,4) translate(-110px,0px);
+}
 
 section.sidecard{
 	padding: 1px 1px;
@@ -191,20 +174,18 @@ a.button{
 	border:1px solid #444444;
 	margin-bottom: 10px;
 	color: #233333;
+	transition: color 1s, background_color 1s;
+	padding-left:10px;
+	padding-right:10px;
 }
 a.button:hover{
-	animation: Turn 0.8s ease 0s 1 normal running forwards;
-   	-webkit-animation: Turn 0.8s ease 0s 1 normal running forwards;
-    -moz-animation: Turn 0.8s ease 0s 1 normal running forwards;
-    -o-animation: Turn 0.8s ease 0s 1 normal running forwards;
-    -ms-animation: Turn 0.8s ease 0s 1 normal running forwards;
+	background-color: #333333;
+	color: #ffffff;
+}
+
+h2.title{
+	transition: all 0.3s;
 }
 h2.title:hover{
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 	transform: scale(1.05,1.05);
-	-ms-transform: scale(1.05,1.05);
-	-webkit-transform: scale(1.05,1.05);
-	-o-transform: scale(1.05,1.05);
-	-moz-transform: scale(1.05,1.05);
 }

@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> IntLSY的小窝 | 线段树维护插入 </title>
+	<script src="/MyBlog/blog/draw.js"> </script>
+	<script> Head(); </script>
+</head>
+
+<body>
+	<div class="main">
+
+	<a href="basic.html">
+		<section class="title">
+			<!-- <a class="button" href="../index.html"> back </a> -->
+			<h1 class="title" style=""> - map - </h1>
+		</section>
+	</a>
+
+	<!-- Artical begin -->
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> map是啥 </div>
+			数学上说，map是映射. <br />
+			用大白话说，map就是能把一堆中的每件物品与另一堆中的一一对应的魔法.
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 怎么用 </div>
+			首先，需要一个头文件：
+<pre><code>#include &lt;map&gt;
+using namespace std;
+</code></pre>
+			然后她的定义是：
+<pre><code>map &lt;A,B&gt; mmp;
+</code></pre>
+			其中A和B是类型 (如 int,string,double.vector&lt;int&gt;,vector&lt;vector&lt;int&gt;&gt;...... ) <br />
+			怎么访问呢？ <br />
+			直接当作数组用就行！ <br />
+			也就是说，如果你定义了一个<pre><code>map &lt;string,int&gt; mmp</code></pre>
+			就直接
+			<pre><code>mmp["OrzDalao"]=233; </code></pre> <br />
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 进阶用法 </div>
+			类似于set,map也可以：
+<pre><code> insert();
+erase(keyvalue/iterator);
+lower_bound(); (->iterator)
+upper_bound(); (->iterator)
+find(); (->iterator)
+clear();
+size();
+</code></pre>
+			除了这些,map还有一个功能:count(a) - 数数有多少个元素a<br />
+			只不过...因为map是映射，为集合到集合的一一对应关系，满足互异性，所以...... <br />
+			count只会返回0/1
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 复杂度 </div>
+			map里面为<pre style="display:inline"> ^$%^%#(!@%^$@*#) </pre>树（好像是一种平衡树，复杂度为 $log_2n$ <br />
+			只不过常数有些大（比我手写的treap慢两倍左右）,但开$O_2$可能会跑得比较快
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 这东西能干哈？ </div>
+			<div class="contitle"> 正常用法（暗示有...... </div>
+			比起映射，我更喜欢叫map <br />
+			<div class="contitle"> 哈希 </div>
+			因为你可以定义一个 map &lt;long long , int&gt; 来存储哈希表 <br />
+			或者一个 map &lt;string , int&gt; 来直接进行字符串哈希(常数有点大) <br />
+			这样能起到一定的降低代码复杂度的作用。 <br />
+			.<br />
+			<div class="contitle"> 不正常用法（黑恶势力登场！ </div>
+			有些时候...出题人想考考你状压dp，但我不会状压（或者状压后正常数组存不下）<br />
+			怎么办呢？ <a href="https://www.luogu.org/problemnew/show/P4363" class="button" target="_blank"> &nbsp;&nbsp;比如这道题（我是按钮qwq） </a> <br />
+			这题是个 min-max对抗搜索，需要使用状压来改成记忆化搜索 <br />
+			正确的状压: 用一个长度为$n+m$的$01$串表示轮廓线 <br />
+			但我不会qaq...我就把每一行看作一个10进制数，然后在把10行压起来 <br />
+			显然这样做要开 $10^10$ 的数组...但是！实际的状态远远没有这么多！<br />
+			我当时开了个map，用记搜+上面的错误hash直接ac了...
+			<a href="https://www.luogu.org/recordnew/show/6803030" class="button" target="_blank"> Luogu上的提交，跑得还挺快 </a> <br />
+			骗分！
+<pre><code>
+#define MAXN 12
+
+int n,m;
+int a[MAXN][MAXN], b[MAXN][MAXN];
+
+int put[MAXN];
+bool allput;
+ll Gethash(){
+    ll ret = 0;
+    allput = 1;
+    For(i,m){
+        ret *= (ll)n;
+        ret += (ll)put[i];
+        if( put[i] != n ) allput = 0;
+    }
+    return ret;
+}
+map< ll, pii > mem;
+pii Dfs( bool player ){
+    pii ans;
+    if(!player) ans = Mp(-INF,INF);
+    else ans = Mp(INF,-INF);
+
+    ll stat = Gethash();
+    if(allput) return Mp(0,0);
+    if(mem.count(stat)) return mem[stat];
+
+    For(i,m){
+        if( put[i] == n  ||  ( put[i] == put[i-1] && i != 1 ) ) continue;
+
+        put[i]++;
+        pii tans = Dfs(player^1);
+        put[i]--;
+
+        if(!player){
+            tans.F += a[put[i]+1][i];
+            if( tans.F - tans.S > ans.F - ans.S )
+                ans = tans;
+        }else{
+            tans.S += b[put[i]+1][i];
+            if( tans.S - tans.F > ans.S - ans.F )
+                ans = tans;
+        }
+    }
+
+    return mem[stat] = ans;
+}
+
+int main(){
+    FILEIO();
+    Ms(put);
+
+    Read(n,m);
+    For(i,n)
+        For(j,m)
+            Read(a[i][j]);
+    For(i,n)
+        For(j,m)
+            Read(b[i][j]);
+
+    pii ans = Dfs(0);
+    printf("%d\n",ans.F-ans.S);
+
+    END();
+}
+</code></pre>
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 拓展：multimap </div>
+			与map类似，只是一个元素可以存在多次。同理有multiset <br />
+			此时 count() 的返回值就不一定是0/1了 <br />
+			注意！当使用自定义结构体创建multimap/multiset时一定要写好 != 和 < <br />
+			否则会出现奇怪错误
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 注意事项（最后叨叨两句 </div>
+			<ol>
+				<li> map的常数问题(1.2s TLE的惨案...) </li>
+				<li> 在存储数据过多(例如1e8)时，map还是会TLE/RE的！</li>
+				<li> 重点！不要访问map里面一个以前没赋过值（或insert）的下标！否则会RE或返回奇怪的东西！(有时也能ac(逃 </li>
+			</ol>
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 莓了 </div>
+		</div>
+	</section>
+
+	<script> Bottom(); </script>
+
+	</div>
+
+	<script> Sidebar(); </script>
+
+
+</body>
+
+</html>
