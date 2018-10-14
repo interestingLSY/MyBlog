@@ -20,11 +20,12 @@ section{
 	opacity: 0.75;
 	text-align: center;
 	font: inherit;
-	animation: fade-in 0.8s ease 0s 1;
-   	-webkit-animation: fade-in 0.8s ease 0s 1;
-    -moz-animation: fade-in 0.8s ease 0s 1;
-    -o-animation: fade-in 0.8s ease 0s 1;
-    -ms-animation: fade-in 0.8s ease 0s 1;
+	transition: all 1.4s;
+	animation: fade-in 1.4s ease 0s 1;
+   	-webkit-animation: fade-in 1.4s ease 0s 1;
+    -moz-animation: fade-in 1.4s ease 0s 1;
+    -o-animation: fade-in 1.4s ease 0s 1;
+    -ms-animation: fade-in 1.4s ease 0s 1;
 	border-radius: 10px;
 }
 section:hover{
@@ -47,6 +48,11 @@ h1.title{
 	padding-left: 15px;
 	margin: 10px 10px;
 	color: #dd14d3;
+	transition: all 0.4s;
+}
+h1.title:hover{
+	letter-spacing: 20px;
+	padding-left: 20px;
 }
 
 section.card{
@@ -61,12 +67,20 @@ h2.title{
 	padding-left: 60px;
 	color: #dd14d3;
 	margin: 10px 0px;
+	transition: all 0.3s;
+}
+h2.title:hover{
+	letter-spacing: 25px;
 }
 p.describe{
 	color: #233333;
 	font-size: 20px;
 	//padding-left: 60px;
 	margin: 10px 60px;
+	transition: all 0.3s;
+}
+p.describe:hover{
+	letter-spacing: 6px;
 }
 div.context{
 	color: #233333;
@@ -143,6 +157,11 @@ div.sidecont{
 	color: #233333;
 	margin: 10px 30px;
 }
+div.friendlink{
+	font-size: 18px;
+	text-align: left;
+	margin: 10px 30px;
+}
 img.sideimg{
 	width: 90%;
 	margin-top: 10px;
@@ -168,6 +187,10 @@ section.sidecard{
 a{
 	text-decoration: none;
 	color: #f525e4;
+	transition: all 0.3s;
+}
+a:hover{
+	color: #00bbff;
 }
 a.button{
 	border-radius: 4px;
@@ -181,11 +204,4 @@ a.button{
 a.button:hover{
 	background-color: #333333;
 	color: #ffffff;
-}
-
-h2.title{
-	transition: all 0.3s;
-}
-h2.title:hover{
-	transform: scale(1.05,1.05);
 }

@@ -13,9 +13,9 @@
     		-o-animation: fade-in 2.5s ease 0s 1;
     		-ms-animation: fade-in 2.5s ease 0s 1;
     	}
-		
+
 		h1.name{
-			margin-top: 20px;
+			margin-top: 3px;
 			letter-spacing: 15px;
 			padding-left: 15px;
 			font-size: 30px;
@@ -29,12 +29,18 @@
 			padding-left: 5px;
 			padding-bottom: 0px;
 		}
-
-
 	</style>
+
+	<script>
+	function Changepic(event){
+		event.preventDefault();
+		document.getElementById("b").background="https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515"+Math.random();
+	}
+	</script>
+
 </head>
 
-<body>
+<body id="b" background="https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515">
 	<section class="title">
 		<img class="head" src="img/index/head.jpeg">  </img>
 		<h1 class="name"> intlsy </h1>
@@ -50,10 +56,11 @@
 		</ul>
 		<a class="button" href="blog/list.html">
 			<h2 style="padding: 5px 20px; display:inline;">
-				My blog
+				OI blog
 			</h2>
 		</a>
-		<div style="margin-top:20px;margin-bottom:20px;"> </div>
+		<div style="margin-top:15px;margin-bottom:15px;"> </div>
+		<div style="margin-top:15px;margin-bottom:15px;"> </div>
 		<a class="button" href="http://interestinglsy.coding.me/2147483648/">
 			<h2 style="padding: 5px 20px; display:inline;">
 				累了?玩会游戏吧
@@ -61,11 +68,17 @@
 		</a>
 		<br />
 		<a href="about.html">
-			<h2 style="padding: 0px 20px; display:inline; margin-bottom:10px; font-size:20px;">
+			<h2 class="aboutlink">
 				. . . . . . . . . . . .
 			</h2>
 		</a>
 	</section>
+	<a class="chgbutton" href="233" onclick="Changepic(event)">
+		<h2 style="margin:1px 4px;">
+			换张<br />
+			背景
+		</h2>
+	</a>
 </body>
 
 </html>

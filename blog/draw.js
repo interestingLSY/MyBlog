@@ -45,32 +45,32 @@ document.write(" \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> dalao们 </h2> \
 		<a href=\"https://captain1.cnblogs.com/\"> \
-			<div class=\"sidecont\"> \
+			<div class=\"friendlink\"> \
 				<div style=\"color:#000;display:inline;\"> L</div><div style=\"color:#f00;display:inline;\">iboao </div>大佬的博客 \
 			</div> \
 		</a> \
 		<a href=\"https://mrclr.cnblogs.com/\"> \
-			<div class=\"sidecont\"> \
+			<div class=\"friendlink\"> \
 				mrclr大佬的博客 \
 			</div> \
 		</a> \
 		<a href=\"https://yuyanjiaB.cnblogs.com/\"> \
-			<div class=\"sidecont\"> \
+			<div class=\"friendlink\"> \
 				BZY 红胖子 (bin哥) \
 			</div> \
 		</a> \
 		<a href=\"http://www.cnblogs.com/ivorysi\"> \
-			<div class=\"sidecont\"> \
+			<div class=\"friendlink\"> \
 				在下司公子，又名4 + 7 \
 			</div> \
 		</a> \
 		<a href=\"https://shulker.cnblogs.com/\"> \
-			<div class=\"sidecont\"> \
+			<div class=\"friendlink\"> \
 				.....(nxy的博客) \
 			</div> \
 		</a>  \
 		<a href=\"https://Ch-someone.cnblogs.com/\"> \
-			<div class=\"sidecont\"> \
+			<div class=\"friendlink\"> \
 				GGF主席杜子德 \
 			</div> \
 		</a> \

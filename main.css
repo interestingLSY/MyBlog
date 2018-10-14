@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     100%{ opacity:0.5; }
 }
 body{
-	background:url("https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515") no-repeat;
+	/*background:url("https://acg.toubiec.cn/random.php?fa8e648d8f8fcb8469b51515") no-repeat;*/
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:center top;
@@ -62,4 +62,45 @@ img.head{
 	margin-top: 40px;
 	width: 60%;
 	height: 60%;
+}
+
+a.chgbutton{
+	border-radius: 4px;
+	border:1px solid #444444;
+	padding: 0px;
+	transition: color 1s, background_color 1s;
+	float:right;
+}
+@keyframes Chg{
+	0%{
+		background-color: #ffffff55;
+		color: #233333;
+	}
+	10%{
+		background-color: #ffffff55;
+		color: #233333;
+	}
+	90%{
+		background-color: #0088ccaa;
+		color: #ffffff;
+	}
+	100%{
+		background-color: #0088ccaa;
+		color: #ffffff;
+	}
+}
+a.chgbutton{
+	animation: Chg 2s linear 1s 100000 alternate;
+}
+
+h2.aboutlink{
+	padding: 0px 20px;
+	display:inline;
+	margin-bottom:10px;
+	font-size:20px;
+	transition: all 0.4s;
+}
+h2.aboutlink:hover{
+	color: #0088cc;
+	font-size:25px;
 }
