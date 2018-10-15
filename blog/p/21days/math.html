@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> IntLSY的小窝 | N次剩余--数论的集大成者 </title>
+	<script src="/MyBlog/blog/draw.js"> </script>
+	<script> Head(); </script>
+</head>
+
+<body>
+	<div class="main">
+
+	<a href="21days.html">
+		<section class="title">
+			<!-- <a class="button" href="../index.html"> back </a> -->
+			<h1 class="title" style=""> - N次剩余-数论的集大成者 - </h1>
+		</section>
+	</a>
+
+	<!-- Artical begin -->
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> N次剩余？那是什么？ </div>
+			说人话，$b$ 在 $mod\ p$ 意义下的 $a$ 次方根就是 $b$ 在 $mod\ p$ 意义下的 $a$ 次剩余。 <br />
+			假设我们把她记为 $x$ , 则有 $x^a\equiv b(mod\ p)$. <br />
+			这个问题其实挺复杂的233，这里我只唠唠$p$为质数的情况 <br />
+			<del>更多内容</del>我不会的部分请参照 <a class="button" href="https://www.cnblogs.com/ivorysi/p/9050357.html" target="_blank"> dalao的博客 </a>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 兜售目录一份qwq  </div>
+			我们将依次解决:
+			<ul>
+				<li> 解N次剩余方程的大致思路 </li>
+				<li> 解离散对数问题($a^x\equiv b(mod\ p)$)的方法 (BSGS)(本文中没有详细介绍) </li>
+				<li> 原根的相关知识 <br />
+					<ul>
+						<li> 周期性 </li>
+						<li> 怎么求 </li>
+						<li> 怎么快速求（有证明！） </li>
+					</ul>
+				</li>
+			</ul>
+			不要怂，我们干！
+		</div>
+	</section>
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 预备知识 </div>
+			<ul>
+				<li> 快速幂 </li>
+				<li> 拓展欧几里德,exgcd ($ax+by=gcd(a,b)$) </li>
+				<li> BSGS, baby step gaint step 算法 <br />
+					这里 $p$ 为质数， 无需拓展BSGS </li>
+				<li> 原根，设质数$p$的原根为g，则 $g^0\ mod\ p,g^1\ mod\ p,g^2\ mod\ p...g^{n-2}\ mod\ p$ 与 $0,1,2...p-1$ 一一对应 <br />
+					其中"求原根"的部分需要用到:
+					<ul>
+						<li> 费马小定理 </li>
+						<li> 裴蜀定理，又名贝祖定理 </li>
+					</ul>
+				</li>
+				<li> 一个智商还行的脑子（我都看懂了您们也一定能 </li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 开肝！ </div>
+			设方程为 $x^a\equiv b(mod\ p)$ , $g$ 为 $p$ 的原根 <br />
+			设 $x=g^c,b=g^d$ 那么我们现在要求c (d怎么球?下面会讲)<br />
+			则我们要求 $c,d$ 使得 $g^{ac}\equiv g^d(mod\ p)$ <br />
+			注意这是个同余式而不是等式 <br />
+			那么 $ac \equiv d(mod\ p)$ <br />
+			而这个东西可以转化为 $ac+py=d$ 然后用拓展欧几里德(exgcd)求出 $x$<br />
+			所以 $x=g^c$ 用快速幂算一下就行辣！
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> $d$怎么求 </div>
+			问题为：已知 $g,T,p$，求满足 $g^d\equiv T(mod\ p)$ 的最小 $d$ <br />
+			BSGS即可 <br />
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 原根怎么求 </div>
+			根据定义，$For\ i \in [0,p-1), g^i$ 互不相同 <br />
+			也就是说， 若$i\in[0,p-1)$,只有 $i=0时g^i\equiv 1 (mod\ p)$ <br />
+			而保证了这点，就可以保证 $For\ i \in [0,p-1), g^i$ 互不相同 <br />
+			那么我们就可以把 $i$ 从 $1$ 试到 $p-2$ 看看有没有 $g^i=1$。有的话 $g$ 就不是原根 <br />
+			好了这就是比较暴力的求法，复杂度 $O(p^2)$
+			那么有没有更优美的求法？<br />
+			有的。 <br />
+			<div class="contitle"> 原根怎么快速求 </div>
+			先说以下结论吧：<br />
+			我们不用从 $1$ 试到 $p-2$ ,只要对于 $p$ 的每个素因子 $p_i$ ,试 $g^\frac{p-1}{p_i} \not \equiv 1 (mod\ p)$ 即可。 <br />
+			别跑！下面有证明！ <br />
+			证明： <br />
+			<div class="proof" style="font-size:18px">
+			$$设存在一个 t \in [1,p-1) 使得 g^t \equiv 1(mod\ p)$$
+			$$由裴蜀定理可得，关于 x,y 的二元一次不定方程 \ tx\ =\ (p-1)y\ +\ \gcd(t,p-1) 一定有解$$
+			$$所以\ \ g^{tx}\ =\ g^{(p-1)y+\gcd(t,p-1)}$$
+			$${(g^t)}^x\ =\ g^{(p-1)y}\cdot g^{\gcd(t,p-1)}$$
+			$${(g^t)}^x\ =\ {(g^{p-1})}^y\cdot g^{\gcd(t,p-1)}$$
+			$$由费马小定理可得，当g为正整数，p为质数时，g^{p-1} \equiv 1 (mod\ p)$$
+			$$所以\ \ {(g^t)}^x = 1^x = 1\ , \ \ {(g^{p-1})}^y = 1^y = 1$$
+			$$所以\ \ g^{\gcd(t,p-1)} \equiv 1(mod\ p)$$
+			$$因为 t &lt; p-1 所以 \gcd(i,p-1) &lt; p-1 $$
+			$$所以\ \  人家还是gcd，所以\ \gcd(i,p-1)\ 一定可以表示为\ (p-1)/一个质因子\ 再除一个数\ 的形式$$
+			$$所以 \gcd(i,p-1) 可以表示为 \frac{p-1}{p_iq}\ ,\ p_i为p的一个质因子\ ,\ q为一个整数\ 的形式$$
+			$$所以\ \ g^{q\cdot \gcd(t,p-1)} \equiv 1 (mod\ p)$$
+			$$即\ \ g^{\frac{p-1}{p_i}} \equiv 1 (mod\ p)$$
+			$$所以，只要找不到p_i使得g^\frac{p-1}{p_i} \equiv 1(mod\ p),就找不到 t \in [1,p-1) 使得 g^t \equiv 1(mod\ p) $$
+			$$所以此时g就是p的原根，证完辣qwq！$$
+			</div>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 拓展：次方的周期性 </div>
+			假设这里 $p$ 为质数 <br />
+			证明：<br />
+			根据费马小定理， $a^{p-1}\ mod\ p=1$ <br />
+			也就是说，$a^0 \equiv a^{p-1}(mod\ p)$ <br />
+			那么我们在两边同时乘 $a^i$(i为任意正整数),就得到了 $a^i \equiv a^{i+p-1}(mod\ p)$ <br />
+			啊哈！$a^i$ 有周期性，周期为 $p-1$ ！
+		</div>
+	</section>
+
+	<script> Bottom(); </script>
+
+	</div>
+
+	<script> Sidebar(); </script>
+
+
+</body>
+
+</html>

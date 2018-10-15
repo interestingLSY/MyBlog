@@ -1,7 +1,7 @@
 function Head(){
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/blog/blog.css\" />");
 	//document.write("<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async\"></script>");
-	document.write("<script type=\"text/javascript\" async src=\"/MyBlog/Mathjax/MathJax.js?config=TeX-MML-AM_CHTML\"></script>");
+	document.write("<script type=\"text/javascript\" async src=\"/MyBlog/Mathjax/MathJax.js?config=default\"></script>");
 	document.write("<link rel=\"dns-prefetch\" href=\"//cdn.mathjax.org\" />");
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\" />");
 	document.write("<script src=\"/MyBlog/highlight/highlight.pack.js\"> </script>");
@@ -11,7 +11,7 @@ function Bottom(){
 document.write(" \
 	<section class=\"card\" onclick=\"Top();\"> \
 		<p class=\"describe\" style=\"font-size:15px\"> 没东西啦！再看一遍吧qwq！点击这里来回到顶部！=w= <br /> \
-		顺便说一句，点击每页最上方的大标题可以返回上一页qwq！</p> \
+		顺便说一句，点击每页最上方的大标题返回上一页,鼠标移到公式上放大qwq！</p> \
 	</section> \
 	<a href=\"/MyBlog/about.html\"> \
 		<section class=\"card\"> \
@@ -94,7 +94,7 @@ document.write(" \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> 投个食吧qwq </h1> \
 		<img src=/MyBlog/img/index/wechat.png class=\"head\" style=\"margin-bottom:0px\"> </img> \
-		<div class=\"sidecont\"> 感谢老爷投食qwq！ </h2> \
+		<div class=\"sidecont\" style=\"font-size:17px\"> 微信扫扫就行,感谢老爷投食qwq！ </h2> \
 	</section> \
 </div> \
 ")
