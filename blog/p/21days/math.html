@@ -55,7 +55,7 @@
 				<li> 拓展欧几里德,exgcd ($ax+by=gcd(a,b)$) </li>
 				<li> BSGS, baby step gaint step 算法 <br />
 					这里 $p$ 为质数， 无需拓展BSGS </li>
-				<li> 原根，设质数$p$的原根为g，则 $g^0\ mod\ p,g^1\ mod\ p,g^2\ mod\ p...g^{n-2}\ mod\ p$ 与 $0,1,2...p-1$ 一一对应 <br />
+				<li> 原根，设质数$p$的原根为g，则 $g^0\ mod\ p,g^1\ mod\ p,g^2\ mod\ p...g^{p-2}\ mod\ p$ 与 $0,1,2...p-2$ 一一对应 <br />
 					其中"求原根"的部分需要用到:
 					<ul>
 						<li> 费马小定理 </li>
@@ -74,8 +74,8 @@
 			设 $x=g^c,b=g^d$ 那么我们现在要求c (d怎么球?下面会讲)<br />
 			则我们要求 $c,d$ 使得 $g^{ac}\equiv g^d(mod\ p)$ <br />
 			注意这是个同余式而不是等式 <br />
-			那么 $ac \equiv d(mod\ p)$ <br />
-			而这个东西可以转化为 $ac+py=d$ 然后用拓展欧几里德(exgcd)求出 $x$<br />
+			那么 $ac \equiv d(mod\ (p-1))$ <br />
+			而这个东西可以转化为 $ac+(p-1)y=d$ 然后用拓展欧几里德(exgcd)求出 $x$<br />
 			所以 $x=g^c$ 用快速幂算一下就行辣！
 		</div>
 	</section>
