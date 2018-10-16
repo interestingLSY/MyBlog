@@ -15,7 +15,7 @@ document.write(" \
 	</section> \
 	<a href=\"/MyBlog/about.html\"> \
 		<section class=\"card\"> \
-			<p class=\"proud\" style=\"font-size:30px;color:#00ffec\"> 自豪地使用自己亲手写的blog </p> \
+			<p class=\"proud\" style=\"font-size:20px;color:#00ffec\"> 自豪地使用自己亲手写的blog </p> \
 		</section> \
 	</a> \
 ")
