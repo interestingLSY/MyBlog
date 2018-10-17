@@ -6,6 +6,7 @@ function Head(){
 	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"/MyBlog/highlight/styles/default.css\" />");
 	document.write("<script src=\"/MyBlog/highlight/highlight.pack.js\"> </script>");
 	document.write("<script>hljs.initHighlightingOnLoad();</script>");
+	document.write("<script src=\"/MyBlog/ball.js\"> </script>");
 }
 function Bottom(){
 document.write(" \

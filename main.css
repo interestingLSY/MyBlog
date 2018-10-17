@@ -12,6 +12,28 @@ body{
 	background-size:cover;
 	background-attachment:fixed;
 	background-position:center top;
+	cursor: crosshair;
+}
+.ball{
+	color:#00aaff;
+	width: 10px;
+	height: 10px;
+	position: fixed;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+.ball:after,.ball:before{
+	width: inherit;
+	height: inherit;
+	background: inherit;
+	position: absolute;
+}
+.ball:after{
+	top: -5px;
+}
+.ball:before{
+	left: -5px;
 }
 
 section{
