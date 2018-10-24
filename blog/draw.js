@@ -72,7 +72,12 @@ document.write(" \
 		</a>  \
 		<a href=\"https://Ch-someone.cnblogs.com/\" target=\"_blank\"> \
 			<div class=\"friendlink\"> \
-				GGF主席杜子德 \
+				GGF主席杜子德jc \
+			</div> \
+		</a> \
+		<a href=\"https://dukelv.cnblogs.com/\" target=\"_blank\"> \
+			<div class=\"friendlink\"> \
+				DukeLv \
 			</div> \
 		</a> \
 	</section> \
