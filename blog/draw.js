@@ -87,7 +87,7 @@ document.write(" \
 			qq: 2659723130 <br /> \
 			luogu: <a href=\"https://www.luogu.org/space/show?uid=25630\" target=\"_blank\">interestingLSY,uid:25630 </a> <br /> \
 			codeforces: <a href=\"http://codeforces.com/profile/interestingLSY\" target=\"_blank\">interestingLSY</a> <br /> \
-			coding.net: <a href=\"https://coding.net/u/interestingLSY/main\" target=\"_blank\">interestingLSY</a> <br /> \
+			github: <a href=\"https://github.com/interestingLSY\" target=\"_blank\">interestingLSY</a> <br /> \
 			博客出锅了记得跟我说qwq \
 		</div> \
 	</section> \
