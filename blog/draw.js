@@ -80,6 +80,11 @@ document.write(" \
 				DukeLv \
 			</div> \
 		</a> \
+		<a href=\"https://fancydreams.ink/\" target=\"_blank\"> \
+			<div class=\"friendlink\"> \
+				FancyDreams \
+			</div> \
+		</a> \
 	</section> \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> 试着联系我？ </h2> \
