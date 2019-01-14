@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> IntLSY的小窝 | 二分 </title>
+	<script src="/blog/draw.js"> </script>
+	<script> Head(); </script>
+</head>
+
+<body>
+	<div class="main">
+
+	<a href="basic.html">
+		<section class="title">
+			<!-- <a class="button" href="../index.html"> back </a> -->
+			<h1 class="title" style=""> - 二分 - </h1>
+		</section>
+	</a>
+
+	<!-- Artical begin -->
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 先来一道题...... </div>
+			一天Ssy又被人叫做jl的少年了，非常不!开!心! <br />
+			于是他吃饼干，打算释放压力 <br />
+			Ssy的饼干很奇怪，有n个地方可以掰开，其他的地方掰开了就会爆浆 （哪能掰开是已知的<br />
+			为了减肥(心理安慰)，Ssy希望在m<div style="font-size:18px; display:inline">口</div>内将饼干吃完（每次吃一段,也就是要把整块饼干切成 $m+1$ 块 <br />
+			如果Ssy一口吃掉太长的饼干，他就会脸扁 <br />
+			所以Ssy希望他吃的最长的一段饼干最短 <br />
+			$ n,m <= 10^5 $ <br />
+			举个栗子：如果Ssy的饼干有$5$个地方可以掰开，掰开后各段长度分别 $1,5,2,10,3,7$，且Ssy想在3口内将饼干吃完。 <br />
+			那么Ssy将饼干掰成 $ 1+5+2 \quad 10 \quad 3+7 $ 三段，使得最长一块饼干长度为10 <br />
+			Ssy也可以饼干掰成 $ 1+5 \quad 2+10 \quad 3+7 $ 三段，使得最长一块饼干长度为12,但是 $12>10$, 没有第一种方案优，Ssy就会脸扁 <br />
+			<pre>
+
+
+
+
+			想看题解？不存在的qwq
+
+
+
+
+			</pre>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 最暴力的做法？ </div>
+			大爆搜！<br />
+			我们通过 $dfs$ 可以枚举出所有切掉的点的组合,同时计算出每种方案下最长的一段 <br />
+			复杂度：只有 $wys$ 能写过。。。
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 更聪明一点... </div>
+			我们可以枚举最长的一段的长度的 <u>限制</u> (也就是我们令任何一段的长度都不大于他) </br >
+			我们从 $1$ 枚举到 $所有饼干长度之和$，直到找到一个可行解。 </br >
+			复杂度？ <br />
+			$O(n^2)$ <br />
+			那怎么验证一个解是可行解？(是否存在一种合法的划分，使得每段的最大值都不大于限定值？) <br />
+			假设我们要验证的答案是 $ans$ <br />
+			首先，如果有一段饼干的长度就已经 $>ans$ 了，那么一定布星 <br />
+			我们运用一种 <u>贪心</u> 的思路：让掰弯后每一块都<u>尽量的长</u>，却又不超过长度限制 $ans$ <br />
+			那么我们从前往后扫一遍，同时把能“拼”的拼起来 <br />
+			如下图：
+			<img src="img/bis.svg" class="bigimg"> </img>
+			如果加完之后总长仍小于 $ans$, 那么蓝色和红色可以划分为一段 <br />
+			<img src="img/1.svg" class="bigimg"> </img>
+			否则红色和蓝色不能在一段中 <br />
+			<img src="img/2.svg" class="bigimg"> </img>
+			验证的复杂度？ $O(n)$
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 再聪明一点... </div>
+			首先，如果我们能在最长一块饼干的长度为 $x$ 时吃掉所有饼干，就一定能在最长一块长度为 $x+1,x+2,...,x+n(n>0)$ 时吃掉所有饼干（想一想？ <br />
+			像这样，对于一个答案 $a$，可以找到一种方案使之成立，则对于所有 $>x$ （或 $&lt;x$)的答案都成立 <br />
+			我们称之为 决策具有单调性 <br />
+			比如上面的Ssy吃饼干，就有：
+			<table border="1">
+				<tr>
+					<td> 在最长一块饼干长度为 </td>
+					<td> 2 </td>
+					<td> 4 </td>
+					<td> 6 </td>
+					<td> 8 </td>
+					<td> 10 </td>
+					<td> 12 </td>
+					<td> 14 </td>
+				</tr>
+				<tr>
+					<td> 能不能找到解  </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 可以 </td>
+					<td> 可以 </td>
+					<td> 可以 </td>
+			</table>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 知道了这个有啥用啊 </div>
+			减小复杂度！ <br />
+			首先，答案一定在 $[0,所有饼干长度之和]$ 这段区间内 <br />
+			我们每次计算出这段区间的中点（记为$mid$吧） <br />
+			然后看一看能不能将饼干掰成 $m+1$ 段并使最长的一段 <u>小于等于</u> mid <br />
+			<pre></pre>
+			<pre></pre>
+			如果可以...... <br />
+			根据上面的决策单调性，当最长的一段为 $mid+1,mid+2,...$时，也一定有解 <br />
+			<table border="1">
+				<tr>
+					<td> 在最长一块饼干长度为 </td>
+					<td> 1 </td>
+					<td> 2 </td>
+					<td> ... </td>
+					<td> mid-1 </td>
+					<td> mid </td>
+					<td> mid+1 </td>
+					<td> mid+2 </td>
+					<td> ... </td>
+				</tr>
+				<tr>
+					<td> 能不能找到解  </td>
+					<td> 不知道 </td>
+					<td> 不知道 </td>
+					<td> 不知道 </td>
+					<td> 不知道 </td>
+					<td> 可以 </td>
+					<td> 可以 </td>
+					<td> 可以 </td>
+					<td> 可以 </td>
+			</table>
+			那么此时答案一定在区间 $[1,mid]$ 内对吧。 <br />
+			<pre></pre>
+			<pre></pre>
+			如果不行...... <br />
+			根据上面的决策单调性，当最长的一段为 $1,2,3...mid$时，也一定不行 <br />
+			<table border="1">
+				<tr>
+					<td> 在最长一块饼干长度为 </td>
+					<td> 1 </td>
+					<td> 2 </td>
+					<td> ... </td>
+					<td> mid-1 </td>
+					<td> mid </td>
+					<td> mid+1 </td>
+					<td> mid+2 </td>
+					<td> ... </td>
+				</tr>
+				<tr>
+					<td> 能不能找到解  </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 不行 </td>
+					<td> 不知道 </td>
+					<td> 不知道 </td>
+					<td> 不知道 </td>
+			</table>
+			那么此时答案一定在区间 $[mid+1,所有饼干长度之和]$ 内对吧。
+			<pre></pre>
+			<pre></pre>
+			好的，那么此时我们将<u>最优</u>解存在的区间缩小了 $\frac{1}{2}$ ... <br />
+			即使你选择了只有第一次用这种缩小最优解的存在范围的方法然后暴力，（理论上）也只用了原先 $\frac{1}{4}$ 的时间 <br />
+			说不定可以多拿20分？
+			<pre></pre>
+			<pre></pre>
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 继续优化...别睡着了qwq </div>
+			既然我们第一次可以将最优解的范围缩小一半 <br />
+			那我们能不能每一次都这样做呢？ <br />
+			可以啊！ <br />
+			假设我们当前最优解存在的范围已经被锁定在了 $[l,r]$ 中 <br />
+			然后我们每次计算出来这段区间的中点 $mid$, 并验证 $mid$ 是否可行(能不能将饼干分成$m+1$段并使最长一段<u>不超过</u>mid)<br />
+			<ul>
+			<li> 如果可行,最优解存在的区间变为 $[l,mid]$ </li>
+			<li> 否则变为 $[mid+1,r]$ </li>
+			</ul>
+			这样的复杂度是多少呢？ <br />
+			我们要把一个长度为 $所有饼干长度之和$ 的区间每次缩小一半，直到缩小到1 <br />
+			啊！伟大的数学！......告诉我们一共要缩 $\quad log_2(所有饼干长度之和)\quad$ 次 <br />
+			而我们每次检查答案是否可行需要 $O(n)$ 的复杂度 <br />
+			所以最终的复杂度为 $O(n \cdot log_2(所有饼干长度之和))$
+		</div>
+	</section>
+
+	<section class="card">
+		<div class="context">
+			<div class="contitle"> 练练手吧，没讲清楚的问qwq </div>
+			<a class="button" href="https://www.luogu.org/problemnew/show/P1182" target="_blank"> Luogu上的一道题，跟我刚才的Ssy吃饼干很像 </a> <br />
+			<a class="button" href="https://www.luogu.org/problemnew/show/P1396" target="_blank"> 另一道题 </a>
+		</div>
+	</section>
+
+	<script> Bottom(); </script>
+
+	</div>
+
+	<script> Sidebar(); </script>
+
+
+</body>
+
+</html>

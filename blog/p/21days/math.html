@@ -55,7 +55,7 @@
 				<li> 拓展欧几里德,exgcd ($ax+by=gcd(a,b)$) </li>
 				<li> BSGS, baby step gaint step 算法 <br />
 					这里 $p$ 为质数， 无需拓展BSGS </li>
-				<li> 原根，设质数$p$的原根为g，则 $g^0\ mod\ p,g^1\ mod\ p,g^2\ mod\ p...g^{p-2}\ mod\ p$ 与 $0,1,2...p-2$ 一一对应 <br />
+				<li> 原根，设质数$p$的原根为g，则 $g^0\ mod\ p,g^1\ mod\ p,g^2\ mod\ p...g^{p-2}\ mod\ p$ 与 $1,2...p-2,p-1$ 一一对应 <br />
 					其中"求原根"的部分需要用到:
 					<ul>
 						<li> 费马小定理 </li>
@@ -100,7 +100,7 @@
 			有的。 <br />
 			<div class="contitle"> 原根怎么快速求 </div>
 			先说以下结论吧：<br />
-			我们不用从 $1$ 试到 $p-2$ ,只要对于 $p$ 的每个素因子 $p_i$ ,试 $g^\frac{p-1}{p_i} \not \equiv 1 (mod\ p)$ 即可。 <br />
+			我们不用从 $1$ 试到 $p-2$ ,只要对于 $p-1$ 的每个素因子 $p_i$ ,试 $g^\frac{p-1}{p_i} \not \equiv 1 (mod\ p)$ 即可。 <br />
 			别跑！下面有证明！ <br />
 			证明： <br />
 			<div class="proof" style="font-size:18px">

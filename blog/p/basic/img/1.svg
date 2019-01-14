@@ -1,0 +1,21 @@
+<svg width="580" height="169" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="171" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="78" width="544.999988" y="43.086455" x="21.606311" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="151.299052" x="18" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">饼干</text>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="192.499447" x2="209" y1="-9.700948" x1="209" stroke-width="1.5" stroke="#7fff00" fill="none"/>
+  <rect opacity="0.48" id="svg_5" height="75.456686" width="185.362204" y="43.842366" x="23" stroke-width="1.5" stroke="#7fff00" fill="#7fff00"/>
+  <rect opacity="0.41" id="svg_6" height="79.133994" width="163.386115" y="42.126057" x="208.503792" stroke-width="1.5" stroke="#ff0000" fill="#ff0000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" id="svg_8" y="87.008024" x="43" stroke-width="0" stroke="#00ffff" fill="#000000">已经划分好的块</text>
+  <text transform="rotate(-22, 261.631, 81.6192) matrix(0.691628, 0, 0, 1, 50.8143, 0)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_9" y="85.969527" x="224.217932" stroke-width="0" stroke="#00ffff" fill="#000000">我还有能力，还可以再加几块饼干！</text>
+  <text transform="matrix(0.888609, 0, 0, 1, 36.2502, 0)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_10" y="85.433218" x="325.43313" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ff0000" fill="#000000">当前的饼干</text>
+ </g>
+</svg>

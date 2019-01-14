@@ -45,34 +45,44 @@ document.write(" \
 	</section> \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> dalao们 </h2> \
-		<a href=\"https://captain1.cnblogs.com/\"> \
+		<a href=\"https://mrclr.cnblogs.com/\" target=\"_blank\"> \
+			<div class=\"friendlink\"> \
+				$\\color{Black}m\\color{Red}{rclr}$大佬的博客 \
+			</div> \
+		</a> \
+		<a href=\"https://captain1.cnblogs.com/\" target=\"_blank\"> \
 			<div class=\"friendlink\"> \
 				<div style=\"color:#000;display:inline;\"> L</div><div style=\"color:#f00;display:inline;\">iboao </div>大佬的博客 \
 			</div> \
 		</a> \
-		<a href=\"https://mrclr.cnblogs.com/\"> \
-			<div class=\"friendlink\"> \
-				mrclr大佬的博客 \
-			</div> \
-		</a> \
-		<a href=\"https://yuyanjiaB.cnblogs.com/\"> \
+		<a href=\"https://yuyanjiaB.cnblogs.com/\" target=\"_blank\"> \
 			<div class=\"friendlink\"> \
 				BZY 红胖子 (bin哥) \
 			</div> \
 		</a> \
-		<a href=\"http://www.cnblogs.com/ivorysi\"> \
+		<a href=\"http://www.cnblogs.com/ivorysi\" target=\"_blank\"> \
 			<div class=\"friendlink\"> \
 				在下司公子，又名4 + 7 \
 			</div> \
 		</a> \
-		<a href=\"https://shulker.cnblogs.com/\"> \
+		<a href=\"https://shulker.cnblogs.com/\" target=\"_blank\"> \
 			<div class=\"friendlink\"> \
 				.....(nxy的博客) \
 			</div> \
 		</a>  \
-		<a href=\"https://Ch-someone.cnblogs.com/\"> \
+		<a href=\"https://Ch-someone.cnblogs.com/\" target=\"_blank\"> \
 			<div class=\"friendlink\"> \
-				GGF主席杜子德 \
+				GGF主席杜子德jc \
+			</div> \
+		</a> \
+		<a href=\"https://dukelv.cnblogs.com/\" target=\"_blank\"> \
+			<div class=\"friendlink\"> \
+				DukeLv \
+			</div> \
+		</a> \
+		<a href=\"https://fancydreams.ink/\" target=\"_blank\"> \
+			<div class=\"friendlink\"> \
+				FancyDreams \
 			</div> \
 		</a> \
 	</section> \
@@ -80,9 +90,9 @@ document.write(" \
 		<h2 class=\"sidetitle\"> 试着联系我？ </h2> \
 		<div class=\"sidecont\"> \
 			qq: 2659723130 <br /> \
-			luogu: <a href=\"https://www.luogu.org/space/show?uid=25630\">interestingLSY,uid:25630 </a> <br /> \
-			codeforces: <a href=\"http://codeforces.com/profile/interestingLSY\">interestingLSY</a> <br /> \
-			coding.net: <a href=\"https://coding.net/u/interestingLSY/main\">interestingLSY</a> <br /> \
+			luogu: <a href=\"https://www.luogu.org/space/show?uid=25630\" target=\"_blank\">interestingLSY,uid:25630 </a> <br /> \
+			codeforces: <a href=\"http://codeforces.com/profile/interestingLSY\" target=\"_blank\">interestingLSY</a> <br /> \
+			github: <a href=\"https://github.com/interestingLSY\" target=\"_blank\">interestingLSY</a> <br /> \
 			博客出锅了记得跟我说qwq \
 		</div> \
 	</section> \
