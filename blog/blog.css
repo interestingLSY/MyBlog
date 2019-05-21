@@ -36,8 +36,8 @@ section:hover{
 }
 div.main{
 	float:left;
-	margin: 2% 1px 1% 14%;
-	width:50%;
+	margin: 2% 1px 1% 9%;
+	width:58%;
 }
 
 section.title{
@@ -129,8 +129,8 @@ hr{
 
 div.sidebar{
 	float: right;
-	margin: 2% 13% 1% 1%;
-	width: 20%;
+	margin: 2% 9% 1% 1%;
+	width: 22%;
 }
 img.head{
 	width:40%;

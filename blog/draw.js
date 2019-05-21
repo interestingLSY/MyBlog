@@ -105,7 +105,6 @@ document.write(" \
 	<section class=\"sidecard\"> \
 		<h2 class=\"sidetitle\"> 投个食吧qwq </h1> \
 		<img src=/img/index/wechat.png class=\"head\" style=\"margin-bottom:0px\"> </img> \
-		<div class=\"sidecont\" style=\"font-size:17px\"> 微信扫扫就行,感谢老爷投食qwq！ </h2> \
 	</section> \
 </div> \
 ")
