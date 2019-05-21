@@ -86,9 +86,7 @@
 		<div class="context">
 			<div class="contitle"> 结论 </div>
 			答案为：（ans为最短循环子串的长度） <br />
-			<pre><code>
-ans = (n-nxt[n])%n ? n : n-nxt[n];
-			</code></pre>
+			<pre><code>ans = n%(n-nxt[n]) ? n : n-nxt[n];</code></pre>
 		</div>
 	</section>
 
